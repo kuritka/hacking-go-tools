@@ -38,24 +38,24 @@ const port = ":20080"
 
 var logger = log.Log
 
-func main(){
+func main() {
 
-	listener,err := net.Listen("tcp", ":20080")
+	listener, err := net.Listen("tcp", ":20080")
 
-	guard.FailOnError(err,"unable to bind port %s",port)
+	guard.FailOnError(err, "unable to bind port %s", port)
 
-	logger.Info().Msgf("listening on port %s",port)
+	logger.Info().Msgf("listening on port %s", port)
 
 	for {
 		//blocking function, open new connection when new request comes
 		conn, err := listener.Accept()
 
-		guard.FailOnError(err,"unable to accept connection")
+		guard.FailOnError(err, "unable to accept connection")
 
 		id, _ := guid.Guid()
-		id = fmt.Sprintf("connection-%s",id)
+		id = fmt.Sprintf("connection-%s", id)
 
-		logger.Info().Msgf("received connection %s",id)
+		logger.Info().Msgf("received connection %s", id)
 
 		//function close connection after client disconnects or errors.
 		//Don't forget - multiple clients can connect to one echo server
@@ -63,9 +63,8 @@ func main(){
 	}
 }
 
-
 //look to commented echo where direct conn.Read / Write are called
-func echo(conn net.Conn, id string){
+func echo(conn net.Conn, id string) {
 	defer closeEcho(conn, id)
 
 	//conn implements Reader, so can be used on this place as parameter
@@ -74,31 +73,28 @@ func echo(conn net.Conn, id string){
 
 	s, err := reader.ReadString('\n')
 
-	guard.FailOnError(err,"unable to read data %s",id)
+	guard.FailOnError(err, "unable to read data %s", id)
 
-	logger.Info().Msgf("received %d bytes: %s\n", len(s),s)
+	logger.Info().Msgf("received %d bytes: %s\n", len(s), s)
 
-	logger.Info().Msgf("writing data  %s",id)
+	logger.Info().Msgf("writing data  %s", id)
 
 	writer := bufio.NewWriter(conn)
 
 	_, err = writer.Write([]byte(s))
 
-	guard.FailOnError(err,"unable to write data %s",id)
+	guard.FailOnError(err, "unable to write data %s", id)
 
 	//writing data to underlying writer - in this case conn instance
 	writer.Flush()
 
 }
 
-
-func closeEcho(conn net.Conn, id string){
+func closeEcho(conn net.Conn, id string) {
 
 	err := conn.Close()
 
-	guard.FailOnError(err,"unable to close connection  %s",id)
+	guard.FailOnError(err, "unable to close connection  %s", id)
 
-	logger.Info().Msgf("closed  %s",id)
+	logger.Info().Msgf("closed  %s", id)
 }
-
-

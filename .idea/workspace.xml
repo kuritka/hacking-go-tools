@@ -19,7 +19,7 @@
       <change afterPath="$PROJECT_DIR$/../gott/xx.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1_portscanner/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2_13_forward_proxy/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_14_https_forward_proxy/main.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/common/log/log.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../horizontal-scaling/.idea/horizontal-scaling.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../horizontal-scaling/Dockerfile-dataservice" afterDir="false" />
@@ -81,6 +81,7 @@
       <change afterPath="$PROJECT_DIR$/../webhook-abbsa-interview/main.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../webhook-abbsa-interview/scripts/cert-generator.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_13_forward_proxy/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/2_13_forward_proxy/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +115,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/2_13_forward_proxy/main.go" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/2_14_https_forward_proxy" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
@@ -124,7 +125,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.2_13_FW_PROXY">
+  <component name="RunManager" selected="Go Build.2_14_FW_HTTPS_PROXY">
     <configuration name="1_PORT SCANNER" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="hck" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -163,10 +164,20 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="2_14_FW_HTTPS_PROXY" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="hck" />
+      <working_directory value="$PROJECT_DIR$/2_14_https_forward_proxy" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/2_14_https_forward_proxy/main.go" />
+      <package value="hck" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Go Build.1_PORT SCANNER" />
       <item itemvalue="Go Build.2_11_ECHO" />
       <item itemvalue="Go Build.2_13_ECHO" />
+      <item itemvalue="Go Build.2_14_FW_HTTPS_PROXY" />
       <item itemvalue="Go Build.2_13_FW_PROXY" />
     </list>
     <recent_temporary>
@@ -179,10 +190,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="590" y="225" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581354603177">
+    <state x="590" y="225" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581373619008">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="590" y="225" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1581354603177" />
+    <state x="590" y="225" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1581373619008" />
     <state x="2335" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.5280.1053@0.27.5280.1053" timestamp="1581351988436" />
     <state x="2218" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580992926912" />
     <state x="2435" y="343" width="639" height="398" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580996949558">
@@ -193,55 +204,55 @@
       <screen x="0" y="27" width="5280" height="1053" />
     </state>
     <state x="2333" y="128" width="844" height="827" key="CommitChangelistDialog2/0.27.5280.1053@0.27.5280.1053" timestamp="1581334386489" />
-    <state x="712" y="324" width="357" height="498" key="FileChooserDialogImpl" timestamp="1581349275069">
+    <state x="712" y="324" width="357" height="512" key="FileChooserDialogImpl" timestamp="1581373579717">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="712" y="324" width="357" height="498" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1581349275069" />
+    <state x="712" y="324" width="357" height="512" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1581373579717" />
     <state x="1958" y="324" width="424" height="491" key="FileChooserDialogImpl/0.27.5280.1053@0.27.5280.1053" timestamp="1581344924470" />
     <state x="2543" y="296" width="424" height="491" key="FileChooserDialogImpl/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580992913540" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1581354629150">
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1581373858758">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1581354629150" />
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1581373858758" />
     <state width="1874" height="339" key="GridCell.Tab.0.bottom/0.27.5280.1053@0.27.5280.1053" timestamp="1581351949582" />
     <state width="1634" height="266" key="GridCell.Tab.0.bottom/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580997775622" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1581354629150">
+    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1581373858758">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1581354629150" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1581373858758" />
     <state width="1874" height="339" key="GridCell.Tab.0.center/0.27.5280.1053@0.27.5280.1053" timestamp="1581351949582" />
     <state width="1634" height="266" key="GridCell.Tab.0.center/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580997775621" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1581354629149">
+    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1581373858757">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1581354629149" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1581373858757" />
     <state width="1874" height="339" key="GridCell.Tab.0.left/0.27.5280.1053@0.27.5280.1053" timestamp="1581351949582" />
     <state width="1634" height="266" key="GridCell.Tab.0.left/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580997775621" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1581354629150">
+    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1581373858758">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1581354629150" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1581373858758" />
     <state width="1874" height="339" key="GridCell.Tab.0.right/0.27.5280.1053@0.27.5280.1053" timestamp="1581351949582" />
     <state width="1634" height="266" key="GridCell.Tab.0.right/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580997775622" />
-    <state width="1874" height="339" key="GridCell.Tab.1.bottom" timestamp="1581353878998">
+    <state width="1874" height="339" key="GridCell.Tab.1.bottom" timestamp="1581373685740">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="339" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1581353878998" />
+    <state width="1874" height="339" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1581373685740" />
     <state width="1874" height="339" key="GridCell.Tab.1.bottom/0.27.5280.1053@0.27.5280.1053" timestamp="1581351950097" />
-    <state width="1874" height="339" key="GridCell.Tab.1.center" timestamp="1581353878998">
+    <state width="1874" height="339" key="GridCell.Tab.1.center" timestamp="1581373685740">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="339" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1581353878998" />
+    <state width="1874" height="339" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1581373685740" />
     <state width="1874" height="339" key="GridCell.Tab.1.center/0.27.5280.1053@0.27.5280.1053" timestamp="1581351950097" />
-    <state width="1874" height="339" key="GridCell.Tab.1.left" timestamp="1581353878998">
+    <state width="1874" height="339" key="GridCell.Tab.1.left" timestamp="1581373685739">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="339" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1581353878998" />
+    <state width="1874" height="339" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1581373685739" />
     <state width="1874" height="339" key="GridCell.Tab.1.left/0.27.5280.1053@0.27.5280.1053" timestamp="1581351950096" />
-    <state width="1874" height="339" key="GridCell.Tab.1.right" timestamp="1581353878998">
+    <state width="1874" height="339" key="GridCell.Tab.1.right" timestamp="1581373685740">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="339" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1581353878998" />
+    <state width="1874" height="339" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1581373685740" />
     <state width="1874" height="339" key="GridCell.Tab.1.right/0.27.5280.1053@0.27.5280.1053" timestamp="1581351950097" />
     <state x="611" y="280" width="698" height="546" key="find.popup" timestamp="1581349833261">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -255,6 +266,11 @@
           <url>file://$PROJECT_DIR$/2_13_forward_proxy/main.go</url>
           <line>33</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/2_14_https_forward_proxy/main.go</url>
+          <line>108</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

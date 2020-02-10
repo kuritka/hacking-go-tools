@@ -67,24 +67,24 @@ const port = ":20080"
 
 var logger = log.Log
 
-func main(){
+func main() {
 
-	listener,err := net.Listen("tcp", ":20080")
+	listener, err := net.Listen("tcp", ":20080")
 
-	guard.FailOnError(err,"unable to bind port %s",port)
+	guard.FailOnError(err, "unable to bind port %s", port)
 
-	logger.Info().Msgf("listening on port %s",port)
+	logger.Info().Msgf("listening on port %s", port)
 
 	for {
 		//blocking function, open new connection when new request comes
 		conn, err := listener.Accept()
 
-		guard.FailOnError(err,"unable to accept connection")
+		guard.FailOnError(err, "unable to accept connection")
 
 		id, _ := guid.Guid()
-		id = fmt.Sprintf("connection-%s",id)
+		id = fmt.Sprintf("connection-%s", id)
 
-		logger.Info().Msgf("received connection %s",id)
+		logger.Info().Msgf("received connection %s", id)
 
 		//function close connection after client disconnects or errors.
 		//Don't forget - multiple clients can connect to one echo server
@@ -92,39 +92,38 @@ func main(){
 	}
 }
 
-
-func echo(conn net.Conn, id string){
+func echo(conn net.Conn, id string) {
 	defer closeEcho(conn, id)
 
 	//buffer
-	b := make([]byte,1024)
+	b := make([]byte, 1024)
 
 	for {
 		size, err := conn.Read(b[0:])
 		if err == io.EOF {
-			logger.Error().Msgf("client disconnected %s",id)
+			logger.Error().Msgf("client disconnected %s", id)
 			break
 		}
 		if err != nil {
-			logger.Error().Msgf("unexpected error %s",id)
+			logger.Error().Msgf("unexpected error %s", id)
 			break
 		}
 
-		logger.Info().Msgf("received %d bytes: %s\n", size,string(b))
+		logger.Info().Msgf("received %d bytes: %s\n", size, string(b))
 
-		logger.Info().Msgf("writing data  %s",id)
+		logger.Info().Msgf("writing data  %s", id)
 
-		_,err = conn.Write(b[0:size])
+		_, err = conn.Write(b[0:size])
 
-		guard.FailOnError(err,"unable to write data %s",id)
+		guard.FailOnError(err, "unable to write data %s", id)
 	}
 }
 
-func closeEcho(conn net.Conn, id string){
+func closeEcho(conn net.Conn, id string) {
 
 	err := conn.Close()
 
-	guard.FailOnError(err,"unable to close connection  %s",id)
+	guard.FailOnError(err, "unable to close connection  %s", id)
 
-	logger.Info().Msgf("closed  %s",id)
+	logger.Info().Msgf("closed  %s", id)
 }

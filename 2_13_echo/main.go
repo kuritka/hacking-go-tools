@@ -73,7 +73,7 @@ func echo(conn net.Conn, id string) {
 
 	guard.FailOnError(err, "unable to copy data %s", id)
 
-	logger.Info().Msgf("transfered %d , %s",s, id)
+	logger.Info().Msgf("transfered %d , %s", s, id)
 }
 
 func closeEcho(conn net.Conn, id string) {

@@ -12,13 +12,12 @@ import (
 
 var logger = log.Log
 
-
 //forwards traffic from source to specified url and back
-func forward(src net.Conn, url string,  port int ) {
+func forward(src net.Conn, url string, port int) {
 
 	//working for www.columbia.edu:80, than http://localhost:8443 automatically redirects
-	//ulozto.cz:443 - is HTTPS and listeners close connection as https
-	dst, err := net.Dial("tcp", fmt.Sprintf("%s",url))
+	//ulozto.cz:443 - is HTTPS and listeners close connection
+	dst, err := net.Dial("tcp", fmt.Sprintf("%s", url))
 	guard.FailOnError(err, "unable to make connection to %s or host is unreachable ", url)
 
 	defer dst.Close()
@@ -48,7 +47,7 @@ func main() {
 
 	defer listener.Close()
 
-	logger.Info().Msgf("forwarding on %s listening on port %d", *url,*port)
+	logger.Info().Msgf("forwarding on %s listening on port %d", *url, *port)
 
 	for {
 		//blocking operation accepts new connections from multiple sources
