@@ -5,6 +5,7 @@
       <change afterPath="$PROJECT_DIR$/../awesomeProject/.idea/awesomeProject.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../daily-interview.com/.idea/dictionaries/michal.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../daily-interview.com/Others/NumsToWords/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../daily-interview.com/Others/basics/defer_fatal_error/main.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gott/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gott/codes/code.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gott/culture.go" afterDir="false" />
@@ -16,6 +17,10 @@
       <change afterPath="$PROJECT_DIR$/../gott/number_test.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gott/numbuilder.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../gott/xx.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_11_echo/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/guard/guardians.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/guid/guid.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/log/log.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../horizontal-scaling/.idea/horizontal-scaling.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../horizontal-scaling/Dockerfile-dataservice" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../horizontal-scaling/Dockerfile-web" afterDir="false" />
@@ -38,10 +43,11 @@
       <change afterPath="$PROJECT_DIR$/../horizontal-scaling/web/templates/blogList.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lb/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lb/APPSERVER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lb/dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lb/go.mod" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lb/go.sum" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lb/infrastructure/deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lb/loadbalancer/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lb/init.sh" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lb/loadbalancer/requestProcessor.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lb/server/public/img/london.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lb/server/public/img/mightwork.png" afterDir="false" />
@@ -74,9 +80,8 @@
       <change afterPath="$PROJECT_DIR$/../webhook-abbsa-interview/infrastructure/k8s/webhook-abbsa-interview-deployment.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../webhook-abbsa-interview/main.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../webhook-abbsa-interview/scripts/cert-generator.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PORT_SCANNER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +100,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1XQw3iT2GkEzC3cS6Mq8ThOkv4g" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -108,10 +115,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/2_11_echo/main.go" />
   </component>
-  <component name="RunManager">
-    <configuration name="PORT SCANNER" type="GoApplicationRunConfiguration" factoryName="Go Application">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.2_11_ECHO">
+    <configuration name="1_PORT SCANNER" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="hck" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
@@ -121,38 +134,84 @@
       <output_directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="2_11_ECHO" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="hck" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/2_11_echo/main.go" />
+      <package value="hck" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.1_PORT SCANNER" />
+      <item itemvalue="Go Build.2_11_ECHO" />
+    </list>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2218" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580992926912">
-      <screen x="1920" y="0" width="1680" height="1050" />
+    <state x="2335" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581330059612">
+      <screen x="0" y="27" width="5280" height="1053" />
     </state>
+    <state x="2335" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.5280.1053@0.27.5280.1053" timestamp="1581330059612" />
     <state x="2218" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580992926912" />
     <state x="2435" y="343" width="639" height="398" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580996949558">
       <screen x="1920" y="0" width="1680" height="1050" />
     </state>
     <state x="2435" y="343" width="639" height="398" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580996949558" />
-    <state x="2543" y="296" width="424" height="491" key="FileChooserDialogImpl" timestamp="1580992913540">
-      <screen x="1920" y="0" width="1680" height="1050" />
+    <state x="1958" y="324" width="424" height="491" key="FileChooserDialogImpl" timestamp="1581330024836">
+      <screen x="0" y="27" width="5280" height="1053" />
     </state>
+    <state x="1958" y="324" width="424" height="491" key="FileChooserDialogImpl/0.27.5280.1053@0.27.5280.1053" timestamp="1581330024836" />
     <state x="2543" y="296" width="424" height="491" key="FileChooserDialogImpl/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580992913540" />
-    <state width="1634" height="266" key="GridCell.Tab.0.bottom" timestamp="1580996870066">
-      <screen x="1920" y="0" width="1680" height="1050" />
+    <state width="1634" height="266" key="GridCell.Tab.0.bottom" timestamp="1581331002948">
+      <screen x="0" y="27" width="5280" height="1053" />
     </state>
-    <state width="1634" height="266" key="GridCell.Tab.0.bottom/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580996870066" />
-    <state width="1634" height="266" key="GridCell.Tab.0.center" timestamp="1580996870066">
-      <screen x="1920" y="0" width="1680" height="1050" />
+    <state width="1634" height="266" key="GridCell.Tab.0.bottom/0.27.5280.1053@0.27.5280.1053" timestamp="1581331002948" />
+    <state width="1634" height="266" key="GridCell.Tab.0.bottom/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580997775622" />
+    <state width="1634" height="266" key="GridCell.Tab.0.center" timestamp="1581331002946">
+      <screen x="0" y="27" width="5280" height="1053" />
     </state>
-    <state width="1634" height="266" key="GridCell.Tab.0.center/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580996870066" />
-    <state width="1634" height="266" key="GridCell.Tab.0.left" timestamp="1580996870065">
-      <screen x="1920" y="0" width="1680" height="1050" />
+    <state width="1634" height="266" key="GridCell.Tab.0.center/0.27.5280.1053@0.27.5280.1053" timestamp="1581331002946" />
+    <state width="1634" height="266" key="GridCell.Tab.0.center/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580997775621" />
+    <state width="1634" height="266" key="GridCell.Tab.0.left" timestamp="1581331002945">
+      <screen x="0" y="27" width="5280" height="1053" />
     </state>
-    <state width="1634" height="266" key="GridCell.Tab.0.left/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580996870065" />
-    <state width="1634" height="266" key="GridCell.Tab.0.right" timestamp="1580996870066">
-      <screen x="1920" y="0" width="1680" height="1050" />
+    <state width="1634" height="266" key="GridCell.Tab.0.left/0.27.5280.1053@0.27.5280.1053" timestamp="1581331002945" />
+    <state width="1634" height="266" key="GridCell.Tab.0.left/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580997775621" />
+    <state width="1634" height="266" key="GridCell.Tab.0.right" timestamp="1581331002947">
+      <screen x="0" y="27" width="5280" height="1053" />
     </state>
-    <state width="1634" height="266" key="GridCell.Tab.0.right/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580996870066" />
+    <state width="1634" height="266" key="GridCell.Tab.0.right/0.27.5280.1053@0.27.5280.1053" timestamp="1581331002947" />
+    <state width="1634" height="266" key="GridCell.Tab.0.right/1920.0.1680.1050/0.27.1920.1053/3600.0.1680.1050@1920.0.1680.1050" timestamp="1580997775622" />
+    <state width="1634" height="328" key="GridCell.Tab.1.bottom" timestamp="1581330061767">
+      <screen x="0" y="27" width="5280" height="1053" />
+    </state>
+    <state width="1634" height="328" key="GridCell.Tab.1.bottom/0.27.5280.1053@0.27.5280.1053" timestamp="1581330061767" />
+    <state width="1634" height="328" key="GridCell.Tab.1.center" timestamp="1581330061766">
+      <screen x="0" y="27" width="5280" height="1053" />
+    </state>
+    <state width="1634" height="328" key="GridCell.Tab.1.center/0.27.5280.1053@0.27.5280.1053" timestamp="1581330061766" />
+    <state width="1634" height="328" key="GridCell.Tab.1.left" timestamp="1581330061766">
+      <screen x="0" y="27" width="5280" height="1053" />
+    </state>
+    <state width="1634" height="328" key="GridCell.Tab.1.left/0.27.5280.1053@0.27.5280.1053" timestamp="1581330061766" />
+    <state width="1634" height="328" key="GridCell.Tab.1.right" timestamp="1581330061767">
+      <screen x="0" y="27" width="5280" height="1053" />
+    </state>
+    <state width="1634" height="328" key="GridCell.Tab.1.right/0.27.5280.1053@0.27.5280.1053" timestamp="1581330061767" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/2_11_echo/main.go</url>
+          <line>63</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
