@@ -1,5 +1,5 @@
 /*
-Suimple echo server. Connection implements Reader and Writer interfaces so
+Simple echo server. Connection implements Reader and Writer interfaces so
 .Read([]byte) (size, error), .Write([]byte) (size, error) are present.
 listener.Accept is blocking function and returns new instance of connection.
 Thats why we handle echo in different thread with different connection instance
@@ -55,11 +55,11 @@ package main
 
 import (
 	"fmt"
-	"hck/common/guid"
 	"io"
 	"net"
 
 	"hck/common/guard"
+	"hck/common/guid"
 	"hck/common/log"
 )
 
@@ -91,7 +91,6 @@ func main(){
 		go echo(conn, id)
 	}
 }
-
 
 
 func echo(conn net.Conn, id string){
