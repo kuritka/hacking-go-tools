@@ -2,19 +2,21 @@ package main
 
 import (
 	"crypto/tls"
-	"hck/common/guard"
+	"flag"
+	"fmt"
 	"io"
 	"net/http"
 	"net/url"
 
+	"hck/common/guard"
 	"hck/common/log"
+	//"../common/guard"
+	//"../common/log"
 )
 
 const (
 	key  = "/etc/lb/certs/key.pem"
 	cert = "/etc/lb/certs/cert.pem"
-	port = ":9443"
-	host = "ulozto.cz"
 )
 
 type webRequest struct {
@@ -43,7 +45,7 @@ func init() {
 	client = http.Client{Transport: &transport}
 }
 
-func processRequests() {
+func processRequests(host string) {
 
 	for request := range requestCh {
 
@@ -93,23 +95,30 @@ func processRequest(host string, request *webRequest) {
 }
 
 func main() {
+
+	var url = flag.String("url", "ulozto.cz", "url adress where is proxy pointing i.e. https://forbidden.cz")
+
+	var port = flag.Int("port", 443, "port where is proxy listening ")
+
+	flag.Parse()
+
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		doneCh := make(chan struct{})
 		requestCh <- &webRequest{r: r, w: w, doneCh: doneCh}
-		//waits until LoadBalancer resend request to chosen app server and resend response back
-		//or error happens
+		//waits until proxy resend request to chosen app server
+		//and resend response back or error occurs
 		<-doneCh
 	})
 
-	go processRequests()
+	go processRequests(*url)
 
-	//load balancing
+	//proxying
 	//if nil DefaultServerMux is used and DSM gets registered handler
-	logger.Info().Msgf("listening on %s", port)
-	err := http.ListenAndServeTLS(port, cert, key, nil)
+	logger.Info().Msgf("listening on :%d", *port)
+	err := http.ListenAndServeTLS(fmt.Sprintf(":%d",*port), cert, key, nil)
 
 	guard.FailOnError(err, "server didn't start")
 	//log.Println("server started, press <ENTER> to exit")
 	//_, _ = fmt.Scanln()
-
 }
